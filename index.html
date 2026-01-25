@@ -6,98 +6,112 @@
   <title>University of Connecticut OMFS – Current Residents</title>
 
   <style>
+    :root {
+      --uconn-blue: #000e2f;
+      --uconn-gray: #4b5563;
+      --uconn-light: #f3f4f6;
+      --uconn-accent: #c1c7cd;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
       margin: 0;
       background-color: #ffffff;
-      color: #1f2937;
+      color: #111827;
       line-height: 1.6;
     }
 
     header {
-      background-color: #0033a0; /* UConn Blue */
+      background-color: var(--uconn-blue);
       color: #ffffff;
-      padding: 2.5rem 1rem;
+      padding: 3rem 1rem 2.5rem;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
-      font-weight: bold;
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
     }
 
     header p {
-      margin-top: .5rem;
+      margin-top: .75rem;
       font-size: 1rem;
-      opacity: 0.9;
+      font-weight: 400;
+      color: #e5e7eb;
     }
 
     .container {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: 1050px;
+      margin: 3rem auto;
+      padding: 0 1.25rem;
     }
 
     .year-section {
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
     }
 
     .year-title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      border-bottom: 3px solid #e5e7eb;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--uconn-blue);
+      border-bottom: 4px solid var(--uconn-accent);
       padding-bottom: .5rem;
-      margin-bottom: 1.5rem;
-      color: #0033a0;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
     }
 
     .resident {
-      display: flex;
-      gap: 1.25rem;
-      padding-bottom: 1.25rem;
-      margin-bottom: 1.25rem;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      gap: 1.5rem;
+      padding-bottom: 1.75rem;
+      margin-bottom: 1.75rem;
       border-bottom: 1px solid #e5e7eb;
     }
 
     .resident img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
-      border-radius: 4px;
-      background-color: #f1f5f9;
+      border-radius: 2px;
+      background-color: var(--uconn-light);
+      border: 1px solid #d1d5db;
     }
 
     .resident-details h3 {
-      margin: 0;
+      margin: 0 0 .25rem 0;
       font-size: 1.15rem;
-      font-weight: bold;
+      font-weight: 700;
+      color: #111827;
     }
 
     .resident-details p {
-      margin: .25rem 0;
+      margin: .35rem 0;
       font-size: .95rem;
-      color: #374151;
+      color: var(--uconn-gray);
     }
 
     footer {
-      margin-top: 4rem;
-      padding: 2rem 1rem;
+      margin-top: 5rem;
+      padding: 2.5rem 1rem;
       text-align: center;
       font-size: .85rem;
       color: #6b7280;
-      background-color: #f9fafb;
+      background-color: var(--uconn-light);
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .resident {
-        flex-direction: column;
-        align-items: flex-start;
+        grid-template-columns: 1fr;
       }
 
       .resident img {
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
       }
     }
   </style>
