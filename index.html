@@ -24,8 +24,9 @@
     header {
       background-color: var(--uconn-blue);
       color: #ffffff;
-      padding: 1.5rem 1rem 1.25rem; /* reduced vertical padding */
+      padding: 1.75rem 1rem 1.5rem; /* UConn Health-standard header height */
       text-align: center;
+      border-bottom: 6px solid #ffffff; /* UConn-style divider */
     }
 
     /* Responsive UConn Health logo */
@@ -132,15 +133,21 @@
 <body>
 
 <header>
-  <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;">
-    <!-- UConn Health Logo -->
-    <img src="images/uconn-health-logo.png" alt="UConn Health Logo" class="uconn-logo" />
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;">
 
-    <!-- Title -->
-    <div style="text-align:center;">
-      
-      <p>Oral &amp; Maxillofacial Surgery Residency Program<br />Current Residents</p>
-    </div>
+    <!-- UConn Health Logo -->
+    <img 
+      src="images/uconn-health-logo.png" 
+      alt="UConn Health Logo" 
+      class="uconn-logo"
+    />
+
+    <!-- Program Title -->
+    <p style="margin:0;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:#e5e7eb;">
+      Oral &amp; Maxillofacial Surgery Residency Program<br />
+      Current Residents
+    </p>
+
   </div>
 </header>
 
