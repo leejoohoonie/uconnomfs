@@ -24,36 +24,28 @@
     header {
       background-color: var(--uconn-blue);
       color: #ffffff;
-      padding: 1.75rem 1rem 1.5rem; /* UConn Health-standard header height */
+      padding: 1.75rem 1rem 1.5rem;
       text-align: center;
-      border-bottom: 6px solid #ffffff; /* UConn-style divider */
+      border-bottom: 6px solid #ffffff;
     }
 
-    /* Responsive UConn Health logo */
     .uconn-logo {
-      height: 150px;          /* Desktop size */
+      height: 150px;
       width: auto;
       max-width: 90%;
     }
 
     @media (max-width: 640px) {
       .uconn-logo {
-        height: 100px;        /* Mobile size */
+        height: 100px;
       }
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: .03em;
-      text-transform: uppercase;
     }
 
     header p {
       margin-top: .75rem;
-      font-size: 1rem;
-      font-weight: 400;
+      font-size: .95rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
       color: #e5e7eb;
     }
 
@@ -100,7 +92,6 @@
       margin: 0 0 .25rem 0;
       font-size: 1.15rem;
       font-weight: 700;
-      color: #111827;
     }
 
     .resident-details p {
@@ -109,13 +100,33 @@
       color: var(--uconn-gray);
     }
 
-    footer {
-      margin-top: 5rem;
-      padding: 2.5rem 1rem;
+    /* ===== CURRENT CHIEFS ===== */
+    .chiefs-grid {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .chief-card {
       text-align: center;
-      font-size: .85rem;
-      color: #6b7280;
+    }
+
+    .chief-card img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 2px;
       background-color: var(--uconn-light);
+      border: 1px solid #d1d5db;
+      margin-bottom: .75rem;
+    }
+
+    .chief-card h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111827;
     }
 
     @media (max-width: 640px) {
@@ -128,30 +139,53 @@
         height: 110px;
       }
     }
+
+    footer {
+      margin-top: 5rem;
+      padding: 2.5rem 1rem;
+      text-align: center;
+      font-size: .85rem;
+      color: #6b7280;
+      background-color: var(--uconn-light);
+    }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.75rem;">
-
-    <!-- UConn Health Logo -->
-    <img 
-      src="images/uconn-health-logo.png" 
-      alt="UConn Health Logo" 
-      class="uconn-logo"
-    />
-
-    <!-- Program Title -->
-    <p style="margin:0;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase;color:#e5e7eb;">
+  <div style="max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:.75rem;">
+    <img src="images/uconn-health-logo.png" alt="UConn Health Logo" class="uconn-logo" />
+    <p>
       Oral &amp; Maxillofacial Surgery Residency Program<br />
       Current Residents
     </p>
-
   </div>
 </header>
 
 <div class="container">
+
+  <!-- ================= CURRENT CHIEFS ================= -->
+  <div class="year-section">
+    <div class="year-title" style="text-align:center;">Current Chiefs</div>
+
+    <div class="chiefs-grid">
+      <div class="chief-card">
+        <img src="images/roh.png" alt="Samuel Roh" />
+        <h3>Samuel M. Roh, D.M.D., M.D.</h3>
+      </div>
+
+      <div class="chief-card">
+        <img src="placeholder.jpg" alt="Matthew Goranson" />
+        <h3>Matthew Goranson, D.D.S., M.D.</h3>
+      </div>
+
+      <div class="chief-card">
+        <img src="images/patel.png" alt="Vishaben Patel" />
+        <h3>Vishaben Patel, D.M.D.</h3>
+      </div>
+    </div>
+  </div>
 
   <!-- ================= PGY‑6 ================= -->
   <div class="year-section">
