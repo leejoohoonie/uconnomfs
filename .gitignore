@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Claude working files (not part of the site)
+Claude outputs/
